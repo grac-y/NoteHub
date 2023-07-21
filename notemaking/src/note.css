@@ -1,0 +1,316 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: flex-start;
+    height: 92.7%;
+    position: relative;
+}
+/* @media screen and (max-width: 600px) {
+    .container {
+        top: 426px;
+    }
+} */
+.middlecont{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 12px;
+    margin-right: 45px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+#inputCont{
+    width: 100%;
+    background-color: #333;
+    margin: 0;
+    margin-top: 38px;
+    padding: 0;
+    border-radius: 0;
+}
+.allnotes{
+    width: 75%;
+    float: right;
+    position: relative;
+    left: 21%;
+    overflow: auto;
+    top: 15px;
+    margin: 29px;
+}
+@media screen and (max-width: 1255px) {
+    .allnotes {
+        width: 70%;
+        left: 25%;
+        margin: 22px;
+    }
+  }
+@media screen and (max-width: 1085px) {
+    .allnotes {
+        width: 68%;
+        left: 27%;
+        margin: 20px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .allnotes {
+        width: 62%;
+        left: 32%;
+        margin: 18px;
+    }
+}
+@media screen and (max-width: 860px) {
+    .allnotes {
+        width: 58%;
+        left: 37%;
+        margin: 12px;
+    }
+}
+@media screen and (max-width: 732px) {
+    .allnotes {
+        width: 52%;
+        left: 41%;
+        margin: 14px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .allnotes {
+        width: 86%;
+        left: 5%;
+        margin: 14px;
+        top: 426px;
+    }
+}
+.innerCont{
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 15px;
+    width: 99%;
+}
+#btn_highlight{
+    flex-direction: row;
+    position: relative;
+    margin: 4px;
+    height: 45px;
+}
+.innerCont button{
+    width: 48%;
+    /* background: #8889b7; */
+}
+#addnote{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.innerCont .colorCode{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 2px 6px 2px rgba(60,64,67,0.149);
+    overflow: hidden;
+    z-index: 4011;
+    left: 33.9px;
+    top: 26.8px;
+    padding: 6px;
+    flex-direction: row;
+    width: auto;
+    justify-content: space-between;
+    align-items: center; 
+}
+.innerCont .colorCode i{
+    margin: 6px;
+    font-size: 31px;
+    height: 30px;
+    width: 30px;
+    color: white;
+    /* border-radius: 50%; */
+    text-align: center;
+}
+.innerCont .colorCode i:hover{
+    cursor: pointer;
+    /* font-size: 35px; */
+    border: 2px solid black;
+    overflow: hidden;
+    border-radius: 50%;
+    /* text-decoration: solid; */
+}
+.formLabel{
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+}
+button{
+    width: 0;
+    float: left;
+    font-size: 17px;
+    padding: 6px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4caf50;
+    color: #fff;
+}
+button:hover{
+    cursor: pointer;
+    /* background-color: #383151; */
+}
+.formControl{
+    font-size: 14px;
+    padding: 7px;
+    margin-top: 9px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.2), 3px 8px 15px 5px rgba(0, 0, 0, -1.81);
+}
+textarea.formControl {
+    resize: vertical;
+}
+h2{
+    float: left;
+    margin: 0;
+    font-size: 40px;
+}
+#note_container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    width: 100%;
+    justify-content: space-around;
+}
+@media screen and (max-width: 1255px) {
+    #note_container {
+      margin: 5px;
+    }
+  }
+@keyframes popUpAnimation {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+.card{
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 140px;
+    /* transform: translate(-50%, -50%); */
+    /* animation: popUpAnimation 0.3s ease forwards; */
+    width: 25%;
+    padding: 4px 10px;
+    margin: 22px;
+    box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.2), 3px 8px 15px 5px rgba(0, 0, 0, -1.81);
+}
+@media screen and (max-width: 1255px) {
+    .card {
+        width: 28%;
+        margin: 17px;
+        min-height: 154px;
+    }
+  }
+@media screen and (max-width: 1000px) {
+    .card {
+        width: 42%;
+        margin: 16px;
+    }
+  }
+@media screen and (max-width: 754px) {
+    .card {
+        width: 86%;
+        margin: 16px;
+        min-height: 147px;
+    }
+  }
+@media screen and (max-width: 600px) {
+    .card {
+        width: 43%;
+        margin: 14px;
+        min-height: 147px;
+    }
+  }
+@media screen and (max-width: 520px) {
+    .card {
+        width: 92%;
+        /* margin: 14px;
+        min-height: 147px; */
+    }
+  }
+.card .card_body{
+    width: 100%;
+    padding: 3px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+}
+.card .card_body .card_content{
+    height: 70%;
+}
+@media screen and (max-width: 1255px) {
+    .card .card_body .card_content{
+        height: 75%;
+    }
+  }
+.card .card_body .btns{
+    height: 23%;
+    display: none;
+    margin: 4px;
+    margin-top: 7px;
+    font-size: 14px;
+    width: 88%;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0;
+}
+@media screen and (max-width: 1255px) {
+    .card .card_body .btns{
+        height: 20%;
+    }
+  }
+.card .btns button{
+    width: 0;
+    padding: 0;
+    border: none;
+    background-color: none;
+}
+.card .btns button i{
+    font-size: 17px;
+    color: black;
+}
+.card h5, .card p{
+    font-size: 18px;
+    margin: 4px;
+    text-align: justify;
+}
+@media screen and (max-width: 1255px) {
+    .card h5, .card p{
+        font-size: 17px;
+    }
+  }
+@media screen and (max-width: 860px) {
+    .card h5, .card p{
+        font-size: 15px;
+    }
+  }
+.notes-hidden-nav{
+    left: 8%;
+    width: 87%;
+}
+@media screen and (max-width: 732px){
+    .notes-hidden-nav{
+        left: 12%;
+        width: 80%;
+    }
+}
+@media screen and (max-width: 600px){
+    .notes-hidden-nav{
+        top: 82px;
+        left: 6%;
+        width: 84%;
+    }
+}
